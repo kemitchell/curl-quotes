@@ -26,6 +26,7 @@ var replacements = [
 var replace = String.prototype.replace
 
 module.exports = function curlQuotes(string) {
+  // Apply each replacement to the argument.
   return replacements.reduce(
     function (returned, replacement) {
       return replace.apply(returned, replacement) },

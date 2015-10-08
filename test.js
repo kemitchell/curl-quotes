@@ -2,6 +2,7 @@ var assert = require('assert')
 var curl = require('.')
 var tests = require('straight-to-curly-quotes')
 
+// Replace quotation marks with text descriptions for easy comparison by eye.
 function asciify(string) {
   return string
     .replace(/"/g, '{Straight Double}')
@@ -14,6 +15,7 @@ function asciify(string) {
 function error(string) {
   process.stderr.write(string + '\n') }
 
+// For each of the straight-to-curly-quotes tests...
 tests.forEach(function(test) {
   try {
     assert.equal(curl(test.straight), test.curly) }
