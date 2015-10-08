@@ -1,7 +1,7 @@
 {
   "name": "curl-quotes",
   "description": "convert straight to curly quotes",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "devDependencies": {
     "straight-to-curly-quotes": "1.x"
