@@ -23,3 +23,6 @@ tests.forEach(function(test) {
     error('Actual:   ' + asciify(curl(test.straight)))
     error('Expected: ' + asciify(test.curly))
     process.exit(1) } })
+
+process.stdout.write('Passed ' + tests.length + ' tests.\n')
+process.exit(0)
