@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "author": "Kyle E. Mitchell <kyle@kemitchell.com> (https://kemitchell.com/)",
   "devDependencies": {
-    "straight-to-curly-quotes": "1.0.2"
+    "straight-to-curly-quotes": "1.x"
   },
   "keywords": [
     "quotation marks",
