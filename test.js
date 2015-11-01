@@ -10,7 +10,9 @@ function asciify(string) {
     .replace(/“/g, '{Left Double}')
     .replace(/”/g, '{Right Double}')
     .replace(/‘/g, '{Left Single}')
-    .replace(/’/g, '{Right Single}') }
+    .replace(/’/g, '{Right Single}')
+    .replace(/′/g, '{Single Prime}')
+    .replace(/″/g, '{Double Prime}') }
 
 function error(string) {
   process.stderr.write(string + '\n') }

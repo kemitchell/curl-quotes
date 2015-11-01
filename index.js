@@ -2,8 +2,14 @@ var LEFT_SINGLE = '‘'
 var RIGHT_SINGLE = '’'
 var LEFT_DOUBLE = '“'
 var RIGHT_DOUBLE = '”'
+var SINGLE_PRIME = '′'
+var DOUBLE_PRIME = '″'
 
 var replacements = [
+  [  /^'(em|twas|tis|twill|twould|twere|twon)/gi, ( RIGHT_SINGLE + '$1' ) ],
+  [ /\b'(em|twas|tis|twill|twould|twere|twon)/gi, ( RIGHT_SINGLE + '$1' ) ],
+  [ /(\d+)'(\d+)"/g, ( '$1' + SINGLE_PRIME + '$2' + DOUBLE_PRIME ) ],
+  // [ /(\d+)"/g, ( '$1' + DOUBLE_PRIME ) ],
   [ /([.,;!?])" /g, ('$1' + RIGHT_DOUBLE + ' ' ) ],
   [ /([.,;!?])' /g, ('$1' + RIGHT_SINGLE + ' ' ) ],
   [ /([.,;!?])'" /g, ('$1' + RIGHT_SINGLE + RIGHT_DOUBLE + ' ' ) ],
